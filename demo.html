@@ -20,13 +20,6 @@
     />
 </head>
 <body>
-	<%
-		String userID = null;
-		if(session.getAttribute("userID") != null){
-			userID = (String)session.getAttribute("userID");
-		}
-	%>
-
 	<!--  <nav class="navbar navbar-default">-->
 	<nav id="navbar">
 		<div class="navbar">
@@ -44,9 +37,6 @@
 				<li class="active"><a href="main.jsp">메인</a></li>
 				<li><a href="bbs.jsp">게시판</a></li>
 			</ul>
-			<%
-				if(userID == null){
-			%>
 				<ul class="nav navbar-nav navbar-right">
          		<li class="dropdown">
            			<a href="#" class="dropdown-toggle" 
@@ -58,11 +48,6 @@
             		</ul>    
          		</li>
        			</ul>
-			
-			<% 
-				} else{
-					
-			%>
 				<ul class="nav navbar-nav navbar-right">
          		<li class="dropdown">
            			<a href="#" class="dropdown-toggle" 
